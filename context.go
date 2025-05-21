@@ -1371,3 +1371,7 @@ func (c *Context) Value(key any) any {
 	}
 	return c.Request.Context().Value(key)
 }
+
+func (c *Context) GetOriginWriter() *responseWriter {
+	return &c.writermem
+}
